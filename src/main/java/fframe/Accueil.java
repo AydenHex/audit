@@ -18,6 +18,7 @@ public class Accueil extends JFrame {
     private JTextField loginField;
     private JButton button;
     private Font font;
+    private GridBagConstraints c;
 
     public Accueil() {
         super();
@@ -37,33 +38,38 @@ public class Accueil extends JFrame {
         this.passwordField.setFont(this.font);
         this.button.setFont(this.font);
 
-        GridBagConstraints c = new GridBagConstraints();
-        c.gridx = 0;
-        c.gridy = 0;
-        c.insets = new Insets(0, 0, 10, 30);
-        this.content.add(this.labelLogin, c);
+        this.c = new GridBagConstraints();
 
-        c.gridx = 1;
-        c.gridy = 0;
-        c.gridwidth = 5;
-        this.content.add(this.loginField, c);
-
-        c.gridx = 0;
-        c.gridy = 1;
-        c.insets = new Insets(0, 0, 10, 30);
-        this.content.add(this.labelPassword, c);
-
-        c.gridx = 1;
-        c.gridy = 1;
-        c.gridwidth = 5;
-        this.content.add(this.passwordField, c);
-
-        c.gridx = 1;
-        c.gridy = 2;
-        this.content.add(this.button, c);
+       this.build();
         
         this.setContentPane(this.content);
         this.setJMenuBar(this.menu);
 
+    }
+
+    public void build() {
+        this.c.gridx = 0;
+        this.c.gridy = 0;
+        this.c.insets = new Insets(0, 0, 10, 30);
+        this.content.add(this.labelLogin, c);
+
+        this.c.gridx = 1;
+        this.c.gridy = 0;
+        this.c.gridwidth = 5;
+        this.content.add(this.loginField, c);
+
+        this.c.gridx = 0;
+        this.c.gridy = 1;
+        this.c.insets = new Insets(0, 0, 10, 30);
+        this.content.add(this.labelPassword, c);
+
+        this.c.gridx = 1;
+        this.c.gridy = 1;
+        this.c.gridwidth = 5;
+        this.content.add(this.passwordField, c);
+
+        this.c.gridx = 1;
+        this.c.gridy = 2;
+        this.content.add(this.button, c);
     }
 }
