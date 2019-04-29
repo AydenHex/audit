@@ -1,7 +1,6 @@
 package main;
 
 import java.awt.Dimension;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import audit.*;
@@ -51,10 +50,11 @@ public final class ApplicationConsole {
         securiteSiteWeb.calculNote();
         mAudit.displayTree();
 
-        Accueil test = new Accueil();
-        test.setPreferredSize(new Dimension(200, 200));
-        test.pack();
-        test.setVisible(true);
+        Accueil accueil = new Accueil();
+        accueil.setPreferredSize(new Dimension(500, 500));
+        accueil.setLocationRelativeTo(null);
+        accueil.pack();
+        accueil.setVisible(true);
         
         //System.out.println(monAuditeur.seConnecter("/home/quentin/Documents/user.txt"));
 
