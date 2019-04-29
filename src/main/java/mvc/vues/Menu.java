@@ -1,4 +1,4 @@
-package fframe;
+package mvc.vues;
 
 import javax.swing.*;
 

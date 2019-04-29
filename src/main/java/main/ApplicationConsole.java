@@ -3,9 +3,9 @@ package main;
 import java.awt.Dimension;
 import java.util.ArrayList;
 
-import audit.*;
-import fframe.*;
-import utilisateur.*;
+import mvc.controleurs.AccueilController;
+import mvc.models.*;
+import mvc.vues.*;
 
 /**
  * Hello world!
@@ -51,10 +51,12 @@ public final class ApplicationConsole {
         mAudit.displayTree();
 
         Accueil accueil = new Accueil();
-        accueil.setPreferredSize(new Dimension(500, 500));
+        accueil.setPreferredSize(new Dimension(800, 500));
         accueil.setLocationRelativeTo(null);
         accueil.pack();
         accueil.setVisible(true);
+
+        AccueilController accueilController = new AccueilController(accueil);
         
         //System.out.println(monAuditeur.seConnecter("/home/quentin/Documents/user.txt"));
 

@@ -1,4 +1,4 @@
-package fframe;
+package mvc.vues;
 
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -6,6 +6,8 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 
 import javax.swing.*;
+
+import mvc.controleurs.AccueilController;
 
 public class Accueil extends JFrame {
 
@@ -28,7 +30,8 @@ public class Accueil extends JFrame {
         this.labelPassword = new JLabel("Password :");
         this.passwordField = new JPasswordField(15);
         this.loginField = new JTextField(15);
-        this.button = new JButton("Se connecter");
+        this.button = new JButton("Connexion");
+
         this.font = new Font("Serif", Font.PLAIN, 15);
 
         this.content = new JPanel(new GridBagLayout());
@@ -68,8 +71,19 @@ public class Accueil extends JFrame {
         this.c.gridwidth = 5;
         this.content.add(this.passwordField, c);
 
-        this.c.gridx = 1;
+        this.c.gridx = 2;
         this.c.gridy = 2;
         this.content.add(this.button, c);
+    }
+
+    public void setListener(AccueilController accueilController) {
+        this.button.addActionListener(accueilController);
+    }
+
+    public String getLogin() {
+        return this.loginField.getText();
+    }
+    public String getMdp() {
+        return this.passwordField.getText();
     }
 }

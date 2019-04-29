@@ -1,15 +1,15 @@
-package utilisateur;
+package mvc.models;
 
 public class Utilisateur {
-
-    String login;
-    String mdp;
+    protected String login;
+    protected String mdp;
 
     public Utilisateur(String login, String mdp) {
         this.login = login;
         this.mdp = mdp;
     }
 
+    public Utilisateur(){}
 
     public String getLogin() {
         return this.login;
@@ -26,5 +26,4 @@ public class Utilisateur {
     public void setMdp(String mdp) {
         this.mdp = mdp;
     }
-
 }

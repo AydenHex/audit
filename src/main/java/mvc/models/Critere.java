@@ -1,4 +1,4 @@
-package audit;
+package mvc.models;
 
 import java.util.ArrayList;
 
@@ -113,6 +113,16 @@ public class Critere {
             }
         }
 
+    }
+
+    public Integer compareTo(Critere c) {
+        int result = 0;
+        result += this.intitule.compareTo(c.intitule);
+        result += this.coefficient.compareTo(c.coefficient);
+        result += this.note.compareTo(c.note);
+        result += this.texte.compareTo(c.texte);
+        result += this.parent.compareTo(c.parent);
+        return 0;
     }
 
     public String getArbo(){

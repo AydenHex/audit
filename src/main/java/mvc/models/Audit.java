@@ -1,9 +1,9 @@
-package audit;
+package mvc.models;
 
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
 
-import utilisateur.*;
+import mvc.models.*;
 
 public class Audit {
     
